@@ -1,2 +1,2 @@
 # LuckyTurtleMiner
-Low-power mining firmware and hardware tools by LuckyTurtle Labs
+LuckyTurtleMiner™ firmware + UI for low-power miners. Private during development.
