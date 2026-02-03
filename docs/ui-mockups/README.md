@@ -5,3 +5,9 @@
 - [Connecting](on-device-connecting.md)
 - [Needs Attention](on-device-needs-attention.md)
 - [Info](on-device-info.md)
+
+## Web UI pages
+- [Status](web-status.md)
+- [Setup](web-setup.md)
+- [Logs](web-logs.md)
+- [About](web-about.md)
