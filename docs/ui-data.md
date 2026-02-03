@@ -162,3 +162,36 @@ These are calculated in the UI, not stored as separate fields:
 - **health_indicator**
   - Green if no issues
   - Yellow if `rejected_shares > 0`
+ 
+    ## Web UI: Status Page (Minimal)
+
+The web Status page shows the same truth as on-device, plus IP for convenience.
+
+### Required fields
+- **device_name** (string)
+- **status** (enum)
+  - Values: `mining` | `connecting` | `attention`
+
+- **pool_host** (string)
+
+- **ip_address** (string)
+  - Example: `192.168.1.42`
+
+- **uptime_seconds** (integer)
+
+- **hashrate_hs** (number)
+
+- **accepted_shares** (integer)
+- **rejected_shares** (integer)
+
+### Optional fields
+- **last_share_seconds_ago** (integer)
+
+- **last_error_message** (string)
+  - Only present if status = `attention`
+
+### Derived (UI formatting only)
+- **hashrate_display** (auto scales H/s → kH/s → MH/s etc.)
+- **uptime_display**
+- **status_badge_color**
+
