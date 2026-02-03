@@ -45,3 +45,31 @@ These are calculated in the UI, not stored as separate fields:
   - `needs_attention` → red
 
 ---
+## On-Device: Connecting Screen
+
+### Required fields
+- **device_name** (string)
+
+- **status** (enum)
+  - Must be `connecting` while on this screen
+
+- **pool_host** (string)
+
+- **connect_phase** (enum)
+  - Values: `wifi` | `dns` | `tcp` | `subscribing` | `authorizing` | `waiting_for_work`
+  - Example: `authorizing`
+
+- **retry_in_seconds** (integer, optional)
+  - Only present if currently retrying
+  - Example: `10`
+
+### Derived (UI formatting only)
+- **phase_label**
+  - `wifi` → “Connecting Wi-Fi…”
+  - `dns` → “Resolving host…”
+  - `tcp` → “Opening connection…”
+  - `subscribing` → “Joining pool…”
+  - `authorizing` → “Authorizing…”
+  - `waiting_for_work` → “Waiting for work…”
+- **retry_display**
+  - Example: “Retrying in 10s” derived from `retry_in_seconds`
