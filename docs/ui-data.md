@@ -73,3 +73,48 @@ These are calculated in the UI, not stored as separate fields:
   - `waiting_for_work` → “Waiting for work…”
 - **retry_display**
   - Example: “Retrying in 10s” derived from `retry_in_seconds`
+
+## On-Device: Needs Attention Screen
+
+### Required fields
+- **device_name** (string)
+
+- **status** (enum)
+  - Must be `attention`
+
+- **issue_type** (enum)
+  - Values:
+    - `wifi_failed`
+    - `pool_unreachable`
+    - `auth_failed`
+    - `low_memory`
+    - `overheat`
+    - `unknown`
+
+- **short_message** (string)
+  - Friendly, one-line explanation
+  - Example: “Can’t reach the pool right now”
+
+### Optional fields
+- **details** (string)
+  - Human-readable detail for advanced users
+  - Example: “Connection timed out after 10 seconds”
+
+- **suggested_action** (string)
+  - Example:
+    - “Check Wi-Fi settings”
+    - “Verify pool address”
+    - “Let the device cool down”
+
+- **retry_available** (boolean)
+  - If true, UI shows “Retrying automatically”
+
+- **retry_in_seconds** (integer, optional)
+
+### Derived (UI formatting only)
+- **icon_hint**
+  - `wifi_failed` → Wi-Fi icon
+  - `pool_unreachable` → Link/broken-chain icon
+  - `auth_failed` → Key icon
+  - `overheat` → Thermometer icon
+  - `unknown` → Turtle shrug 🙂
