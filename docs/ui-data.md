@@ -118,3 +118,47 @@ These are calculated in the UI, not stored as separate fields:
   - `auth_failed` → Key icon
   - `overheat` → Thermometer icon
   - `unknown` → Turtle shrug 🙂
+
+## On-Device: Info / Status Screen
+
+### Required fields
+- **device_name** (string)
+
+- **status** (enum)
+  - Must be `mining`
+
+- **uptime_seconds** (integer)
+  - Example: `8640`
+
+- **hashrate_hs** (number)
+  - Hashrate in H/s
+  - Example: `1200000`
+
+- **accepted_shares** (integer)
+
+### Optional fields
+- **rejected_shares** (integer)
+  - Omit if zero to reduce clutter
+
+- **pool_host** (string)
+
+- **last_share_seconds_ago** (integer)
+  - Example: `42`
+
+- **temperature_c** (number, optional)
+  - Only shown if sensor exists
+
+### Derived (UI formatting only)
+- **hashrate_display**
+  - Example: “1.2 MH/s”
+
+- **uptime_display**
+  - Example: “2h 24m”
+
+- **share_status**
+  - If `last_share_seconds_ago < 120` → “Active”
+  - Else → “Waiting for work”
+
+- **health_indicator**
+  - Green if no issues
+  - Yellow if `rejected_shares > 0`
