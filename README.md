@@ -1,3 +1,9 @@
+## TL;DR
+
+**LuckyTurtleMiner** is an early-stage, architecture-first mining project focused on ownership, clarity, and long-term reliability.
+
+There is no released firmware yet. The current goal is to define a clean, understandable foundation before implementation begins.
+
 # 🐢 LuckyTurtleMiner™
 
 **Status:** Early architecture phase  
