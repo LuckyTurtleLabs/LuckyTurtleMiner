@@ -229,3 +229,26 @@ The Setup page allows configuring network-independent mining settings.
 ### Derived (UI formatting only)
 - **pool_display**
   - Example: `stratum.example.com:3333`
+
+## Web UI: Logs Page (Minimal)
+
+Logs are a simple recent-activity feed.
+
+### Required fields
+- **log_lines** (array of strings)
+  - Each line is already formatted for display
+  - Examples:
+    - `[WIFI] Connected: 192.168.1.42`
+    - `[STRATUM] Subscribed + authorized`
+    - `[MINER] Hashrate: 1.02 MH/s`
+    - `[ERROR] Pool timeout — retrying in 10s`
+
+### Optional fields
+- **log_max_lines** (integer)
+  - Example: `200`
+
+- **log_updated_seconds_ago** (integer)
+  - Example: `1`
+
+### Derived (UI formatting only)
+- UI may display timestamps later, but v0.1 does not require them
