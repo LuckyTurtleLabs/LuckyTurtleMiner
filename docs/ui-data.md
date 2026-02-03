@@ -195,3 +195,37 @@ The web Status page shows the same truth as on-device, plus IP for convenience.
 - **uptime_display**
 - **status_badge_color**
 
+## Web UI: Setup Page (Minimal)
+
+The Setup page allows configuring network-independent mining settings.
+
+### Required fields
+- **device_name** (string)
+  - Editable
+  - Example: “LuckyTurtle-01”
+
+- **pool_host** (string)
+  - Example: `stratum.example.com`
+
+- **pool_port** (integer)
+  - Example: `3333`
+
+- **wallet_address** (string)
+
+### Optional fields
+- **worker_name** (string)
+  - Example: `turtle01`
+
+- **use_tls** (boolean)
+  - Default: false
+
+- **save_pending** (boolean)
+  - True while settings are not yet applied
+
+### Actions (UI-triggered)
+- **save_config**
+- **reboot_device**
+
+### Derived (UI formatting only)
+- **pool_display**
+  - Example: `stratum.example.com:3333`
