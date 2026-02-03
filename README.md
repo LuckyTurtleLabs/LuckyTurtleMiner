@@ -4,6 +4,13 @@
 
 There is no released firmware yet. The current goal is to define a clean, understandable foundation before implementation begins.
 
+## Architecture
+
+The high-level system design and component layout are documented here:
+
+➡️ [`docs/architecture.md`](docs/architecture.md)
+
+
 # 🐢 LuckyTurtleMiner™
 
 **Status:** Early architecture phase  
