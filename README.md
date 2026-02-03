@@ -1,142 +1,120 @@
-# 🐢 LuckyTurtleMiner
+# 🐢 LuckyTurtleMiner™
 
-**Open, self-hosted embedded mining software**  
-Built for ownership, transparency, and low-overhead hardware.
+**Status:** Early architecture phase  
+**License:** MIT  
 
----
+LuckyTurtleMiner is a self-hosted mining platform focused on **ownership**, **clarity**, and **long-term reliability**.
 
-## 🚧 Project Status
-
-**Early development — not production ready**
-
-LuckyTurtleMiner is under active development.  
-APIs, configuration methods, supported hardware, and features may change.
-
-This project is shared publicly for learning, experimentation, and collaboration — not as a finished or commercial product.
+This project is intentionally starting from a **clean slate**. No legacy firmware builds are preserved. When implementation begins, LuckyTurtleMiner will be built deliberately from first principles.
 
 ---
 
-## What Is LuckyTurtleMiner?
+## Philosophy
 
-LuckyTurtleMiner is an embedded mining project designed for **small, low-power hardware** (such as ESP32-class devices), with a focus on:
-
-- Local ownership and control  
-- Minimal overhead and dependencies  
-- Transparent, understandable behavior  
-- Self-hosted infrastructure
-
-The goal is to make mining software that is **inspectable, approachable, and controlled by the operator**, rather than hidden behind cloud services or abstraction layers.
-
----
-
-## What This Project Is *Not*
-
-To avoid confusion, LuckyTurtleMiner is **not**:
-
-- ❌ A hosted or cloud mining service  
-- ❌ A profitability or earnings product  
-- ❌ Financial advice  
-- ❌ Designed for industrial-scale mining  
-
-LuckyTurtleMiner exists to support **learning, experimentation, and infrastructure ownership**, not hype or guarantees.
-
----
-
-## Design Principles
-
-LuckyTurtleMiner follows a few core principles:
+LuckyTurtleMiner is designed around a few core ideas:
 
 - **Ownership over convenience**  
-  Your hardware, your node, your configuration.
+  You control the miner. No cloud accounts. No external dependencies.
 
-- **Transparency over abstraction**  
-  No hidden behavior. Clear operation is preferred over magic.
+- **Clarity over abstraction**  
+  The system should be understandable, inspectable, and debuggable.
 
-- **Simplicity over bloat**  
-  Small devices deserve small, focused software.
+- **Stability over hype**  
+  Long-term reliability matters more than chasing trends or short-term hashrate gains.
 
-- **Local-first configuration**  
-  Setup and operation happen on the device whenever possible.
-
----
-
-## Intended Capabilities (Roadmap)
-
-Planned and in-progress goals include:
-
-- Embedded mining support for low-power hardware
-- Simple local web interface for configuration
-- Clear on-device status and metrics
-- Compatibility with self-hosted nodes and pools
-- Documentation that explains *how it works*, not just *how to run it*
-
-This roadmap will evolve as development progresses.
+- **Minimalism over bloat**  
+  Every component must justify its existence.
 
 ---
 
-## Hardware Focus
+## What LuckyTurtleMiner Is
 
-LuckyTurtleMiner is being developed with **embedded platforms** in mind, including:
-
-- ESP32-class microcontrollers  
-- Small TFT or OLED displays  
-- Low-power, always-on operation  
-
-Specific supported hardware and configurations will be documented as the project matures.
+- A **self-hosted mining platform**
+- Designed for **embedded and low-power hardware** (e.g. ESP32-class devices)
+- Intended to run autonomously once configured
+- Built to expose state and behavior clearly
+- Friendly to experimentation and learning
 
 ---
 
-## Relationship to LuckyTurtle Labs
+## What LuckyTurtleMiner Is Not
 
-LuckyTurtleMiner is part of the **LuckyTurtle Labs** ecosystem.
-
-LuckyTurtle Labs explores:
-- Mining software
-- Node infrastructure
-- Embedded systems
-- Open, self-hosted tooling
-
-🌐 https://luckyturtle.io
+- Not a cloud-managed miner
+- Not a closed or proprietary black box
+- Not a hashrate-at-all-costs project
+- Not a fork mill chasing trends
+- Not dependent on third-party dashboards or services
 
 ---
 
-## Updates & Communication
+## High-Level Architecture (Conceptual)
 
-Project updates and progress notes are published here:
+> This is a conceptual architecture. Implementation details will evolve.
 
-- 🔔 Updates: https://luckyturtle.io/updates.html  
-- 📧 Contact: turtlelabs.ops@outlook.com  
+- **Core Miner Loop**  
+  Handles work reception, hashing, and share submission.
 
-Thoughtful feedback and discussion are welcome.
+- **Network Interface**  
+  Manages communication with pools or nodes, separated cleanly from hashing logic.
+
+- **Configuration Layer**  
+  Local, human-readable configuration with safe defaults.
+
+- **UI Layer**  
+  On-device display and optional lightweight web interface focused on clarity.
+
+- **Persistence**  
+  Minimal stored state with easy recovery after restart or power loss.
+
+---
+
+## Development Status
+
+LuckyTurtleMiner is currently in an **architecture-first phase**.
+
+There is no released firmware yet. Development will proceed slowly and intentionally to avoid technical debt and ensure long-term maintainability.
+
+Breaking changes are expected early. Stability comes later.
+
+---
+
+## Roadmap (High Level)
+
+- Architecture documentation
+- Hardware targets defined
+- Initial firmware skeleton
+- Basic UI and configuration flow
+- First test deployments
+- Iterative refinement
+
+No dates are promised.
 
 ---
 
 ## Contributing
 
-Contributions are welcome, especially from those interested in embedded systems, mining infrastructure, or documentation.
+Contributions are welcome, but please note the project is early.
 
-At this stage:
-
-- Please open an **issue** before submitting major changes
-- Keep pull requests **small and focused**
-- Prioritize clarity, readability, and maintainability
-- Avoid adding unnecessary dependencies or complexity
-
-This project values **understandable code** over clever code.
+- Open an issue before proposing major changes
+- Expect interfaces to change
+- Thoughtful discussion is preferred over rushed pull requests
 
 ---
 
-## License
+## Disclaimer
 
-License information will be added as the project stabilizes.
+LuckyTurtleMiner is experimental software.  
+Use at your own risk. No guarantees are made regarding performance, profitability, or suitability for any purpose.
 
 ---
 
-### Closing Note
+## Contact
 
-LuckyTurtleMiner is intentionally **incremental, transparent, and honest**.
+Email: turtlelabs.ops@outlook.com  
+Website: https://luckyturtle.io
 
-If you’re interested in understanding mining infrastructure at a practical level — and building it yourself — you’re in the right place.
+---
 
-🐢
+LuckyTurtleMiner is not trying to be the fastest turtle.
 
+It’s trying to be the one that **finishes the journey**.
