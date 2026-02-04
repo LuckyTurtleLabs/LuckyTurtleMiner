@@ -252,3 +252,33 @@ Logs are a simple recent-activity feed.
 
 ### Derived (UI formatting only)
 - UI may display timestamps later, but v0.1 does not require them
+
+## Web UI: About Page (Minimal)
+
+The About page provides identity, version, and links.
+
+### Required fields
+- **device_name** (string)
+
+- **firmware_name** (string)
+  - Example: `LuckyTurtleMiner`
+
+- **firmware_version** (string)
+  - Example: `0.1.0`
+
+### Optional fields
+- **build_date** (string)
+  - Example: `2026-02-03`
+
+- **hardware_model** (string)
+  - Example: `ESP32-S3`
+
+- **repository_url** (string)
+  - Example: `https://github.com/LuckyTurtleLabs/LuckyTurtleMiner`
+
+- **website_url** (string)
+  - Example: `https://luckyturtle.io`
+
+### Derived (UI formatting only)
+- **version_display**
+  - Example: `LuckyTurtleMiner v0.1.0`
